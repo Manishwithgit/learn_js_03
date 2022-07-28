@@ -1,0 +1,64 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+ </head>
+ <body style="background: rgb(155, 192, 144);">
+    <script>
+
+
+           function apple(topping){
+            const applePromise=new Promise(function(resolve, reject){
+                // wait 1 secand for the pizaa to cook
+                setTimeout(function(){
+
+
+                },)
+                // when you are ready, you can resolve this promise
+
+                resolve(` Here is your fruits🍏 with the topping ${topping.join('')}` );
+                // if something went wrong, we can reject this promise
+            });
+            return applePromise;
+           }
+
+        //    const fruits=apple();
+        //    console.log(fruits)
+
+        const americanPromise=apple(['green']);
+        const indianPromise=apple(['green', 'musrooms', 'onions']);
+
+        console.log(americanPromise, indianPromise);
+
+        americanPromise.then(function(fal){
+            console.log('yeah go it!');
+            console.log(fal);
+        })
+
+
+       //...............................
+
+       let m=new Promise((resolve,reject)=>{
+        let a=1+3
+        if(a==2){
+            resolve('success')
+        } else{
+            reject('failed')
+        }
+       })
+
+       m.then((message)=>{
+        console.log('this is in then '+ message)
+       }).catch((message)=>{
+        console.log('this is in the catch '+ message)
+       })
+
+           
+
+
+    </script>
+ </body>
+ </html>

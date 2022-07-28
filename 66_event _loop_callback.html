@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Loop & Callback</title>
+
+    <style>
+        .shape{
+            margin: 3rem;
+            padding: 3rem;
+            width: 2rem;
+            
+            background: rgb(128, 190, 128);
+            transition: all 0.4s;
+        }
+        .shape.circle{
+            border-radius:100% ;
+        }
+
+        .shape.red{
+            background: red;
+        }
+
+        /* .shape.red.square{
+            border-radius: 0%;
+        } */
+        
+    </style>
+</head>
+<body style="background: rgb(216, 106, 92);">
+
+
+    <div class="to" style="border: 2px solid orange; margin:3rem; padding:3rem; background:white; width: 70px;"> Click Me</div>
+    <div class="shape"> Click Me</div>
+   
+    
+    <script>
+
+        // console.log('starting');
+        // setTimeout(function(){
+        //     console.log('running');
+        // }, 2000);
+        // console.log('the end')
+
+
+        // console.log('starting');
+        // setTimeout(function(){
+        //     console.log('running');
+        // },0);
+        // console.log('the end')
+
+
+        // make it red after 0.5s
+        // make it square after 0.25s
+        // make it purpul after 0.3s
+        // fade out after 0.5s
+        // finish
+
+
+        const go=document.querySelector('.to');
+        // change the text to Go when clicked.
+        go.addEventListener('click', function(e){
+            const elu=e.currentTarget;
+            console.log(elu);
+        })
+
+        const gola=document.querySelector('.shape');
+        // change the text to Go when clicked.
+        gola.addEventListener('click', function(e){
+            const oh=e.currentTarget;
+            oh.textContent='GO!'
+            setTimeout(function(){
+                // make it a circle after 2 sec
+                oh.classList.add('circle');
+
+                // make it red after 0.5s
+                setTimeout(function(){
+                    oh.classList.add('red')
+
+                    // make it square after 0.25s
+                    // setTimeout(function(){
+                    //     oh.classList.add('square')
+                    // },250)
+
+                    setTimeout(function(){
+                        oh.classList.remove('circle')
+                    })
+                },500)
+
+               
+            },2000);
+            
+        });
+
+
+
+
+
+
+
+
+
+        // make it purpul after 0.3s
+        // fade out after 0.5s
+        // finish
+
+
+        
+
+
+
+
+
+
+        // function greeting(name) {
+        // alert('Hello ' + name);
+        // }
+
+        // function processUserInput(callback) {
+        // var name = prompt('Please enter your name.');
+        // callback(name);
+        // }
+
+        // processUserInput(greeting); 
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+      <script>
+        // const range =Array.from({length:10}, function(){
+        //     return "moon";
+        //     console.log(range)
+        // })
+
+        // const content =Array.from({length:10}, function(item, index){
+        //     return index;
+            
+        // })
+        // console.log(content)
+ 
+
+         
+        function createRange(start, end){
+            const range=Array.from({length:end-start + 1},
+            function(item,index){
+                return index+start;
+            })
+            return range;
+        }
+         const my=createRange(2,483);
+         console.log(my)
+          
+         //check if the last array you created is really an array with Array.isArray().......
+         console.log(Array.isArray(my));
+          
+
+           // take the meat object and make three arrays with object.entries(), object.keys, object.values()
+            
+           const meat={
+            ben:10, boon:4, brat:3
+           }
+           console.log(Object.entries(meat))
+           console.log(Object.values(meat))
+           console.log(Object.keys(meat))
+
+           Object.values(meat).forEach(inerqty=>{
+            console.log(inerqty)
+           })
+           Object.entries(meat).forEach(entry=>{
+            console.log(entry)
+           })
+           Object.keys(meat).forEach(chabhi=>{
+            console.log(chabhi)
+           })
+
+           
+        //    Object.entries(meat).forEach(insert=>{
+
+            
+            // const key=insert[0];
+            // const valu=insert[1]
+            
+            // const[key, valu]=insert
+
+            // console.log(key, valu)
+        //    })
+           
+           Object.entries(meat).forEach(([key,valu])=>{
+                console.log(key, valu)
+            })
+
+          //...............................47 lec.......
+           
+        //   var buns={
+        //     ['ben', 'boon', 'brat']
+        //    }
+        //   console.log(buns.join('or'))
+          
+        // we have a string 'hot cats, burgers, sugarcane, orange juice' -use split() to turn it into an array
+            const foodstr='hot cats, burgers, sugarcane, orange juice';
+            console.log(foodstr.split(','));
+
+
+
+            // ...................48 lec...............................
+
+         const feedback=[
+            {Comment:'hate my mind', rating:4},
+            {Comment:'harrible your action', rating:3},
+            {Comment:'smooth your hair', rating:4.4},
+            {Comment:'ambition needs work', rating:3.3},
+        ]
+         
+        // this is one by  one search method ...........
+
+        //  const findben=(feedbk)=> feedbk.Comment.includes('c');
+
+        //  const brating=feedback.find(findben);
+        //  console.log(brating)
+
+        function findByword(word){
+            return function(singlefeed){
+                return singlefeed.Comment.includes(word);
+            }
+        }
+
+        const hfinder=feedback.find(findByword('hate'))
+        const smofinder=feedback.find(findByword('smooth'))
+
+        console.log(hfinder);
+        console.log(smofinder);
+
+        // find all ratings that are above 2 with filter()...............
+
+        //   const goodReviews=feedback.filter(singlefeed=>{
+        //     if(singlefeed.rating >=2){
+        //         return true;
+        //     } else{
+        //         return false;
+        //     }
+        //   });
+        const Reviews=feedback.filter(onefeedback=>onefeedback.rating > 2);
+
+          console.table( Reviews)
+        // remove  
+        const loseRatings=feedback.filter(akela=>akela.rating );
+        console.table(loseRatings)  
+        
+         
+        // sort the ....................sort()..........
+        const num=[1,4,2,22,11,333,123,1224,1232]
+        const numsort =num.sort(function(pehlaitem, dusraitem){
+            return pehlaitem - dusraitem;
+        })
+        console.log(numsort)
+
+
+        // sort the rupies with sort().......
+
+        const rupies={hotchiken:432, boom:234, thali:443, home:121,}
+        const product=Object.entries(rupies).sort(function(a,b){
+            const arupi=a[1];
+            const brupi=b[1];
+            return brupi-arupi;
+            // debugger;
+        })
+
+        // console.table(product);
+        console.table(Object.fromEntries(product));
+      </script>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <script>
+
+      // setTimeout (function(){
+      //    console.log('done');
+      // }, 3000);
+
+
+        function buzzer(){
+         console.log('manish ');
+        }
+        // console.log('starting');
+        setTimeout(buzzer, 1000);
+        // console.log('finishing')
+
+          setInterval(buzzer, 1000)
+
+       function setImediateIntrval(funTorun, ms){
+         // right away call that function
+
+         funTorun();
+
+         // run a regular interval
+         return setInterval(funTorun, ms);
+
+       }   
+
+      //  setImediateIntrval(buzzer, 2000);
+
+      //  function sayHi(){
+      //    console.log('hello');
+
+      //  }
+
+      //  setImediateIntrval(sayHi, 200  );
+
+
+       const poop=setInterval(function(){
+         console.log('poo');
+         console.log('heheh');
+       },200 )
+
+       setTimeout(function (){
+         clearInterval(poop);
+       },2000)
+
+    </script>
+ </body>
+ </html>

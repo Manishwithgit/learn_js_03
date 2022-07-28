@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bind call and apply</title>
+    <style>body{background: rgb(187, 141, 95);}</style>
+</head>
+<body>
+
+    <h1>Manish</h1>
+    <div class="rap">
+        <p>this my page</p>
+     </div>
+    <script>
+        const person={
+            name:'heloo boss',
+            sayhi(){
+                console.log(`okay ${this.name}`);
+                return `hey ${this.name}`
+            }
+        };
+
+        const moon={name:'Moon'};
+        // const sayhi=person.sayhi.bind(moon);
+
+        // const sayhi=person.sayhi.bind(person);
+        const sayhi=person.sayhi.bind({name:'monkey'});
+
+
+
+        // query selector example......
+
+        // by calling bind against queryselector, we say when the $ funtion is run, use `document` as the thsi value...
+
+
+
+        const $ =  document.querySelector.bind(document);
+
+        const lookFor=document.querySelectorAll.bind(document);
+
+        const page=document.querySelector('.rap');
+        const p=page.querySelector('p');
+
+        console.log(p);
+        console.log($('p'));
+        console.log(lookFor('p'));
+
+        const bill={
+            total:1000,
+            calculate:function(taxRate){
+                  return this.total+(this.total*taxRate);
+            }
+        }
+
+        const total=bill.calculate(0.12);
+
+        const calc =bill.calculate;
+        // console.log(total);
+        console.log(calc(0.13)); 
+
+
+
+
+        const numbers = [5, 6, 1, 2, 3, 7, 10];
+
+            const max = Math.max.apply(null, numbers);
+
+            console.log(max);
+            // expected output: 10
+
+            const min = Math.min.apply(null, numbers);
+
+            console.log(min);
+            // expected output: 1
+
+
+    </script>
+</body>
+</html>

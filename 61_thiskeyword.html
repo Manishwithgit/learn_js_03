@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this keyword</title>
+    <style>body{background: rgb(129, 189, 129);}</style>
+</head>
+<body>
+       <h1>Hello </h1>
+    
+        <button class="one" style="background: rgb(138, 138, 70);">Button.1</button>
+   
+    <br>
+    <br>
+    <button class="two" style="background: rgb(138, 138, 70); ">Button.2 </button>
+
+
+
+
+    <script>
+
+        const btn1=document.querySelector('.one')
+        const btn2=document.querySelector('.two')
+
+        // function aboutButton(){
+        //     console.log('outside',this);
+        //     const that=this;
+        //     setTimeout(function(){
+        //         console.log('inside', this);
+        //         that.textContent='You clicked '
+        //     }, 1000);
+        // }
+
+        function aboutButton(){
+            console.log('outside',this);
+            
+            setTimeout(()=>{
+                console.log('inside', this);
+                this.textContent='You clicked '
+            }, 1000);
+        }
+
+
+        
+
+        btn1.addEventListener('click', aboutButton);
+        btn2.addEventListener('click', aboutButton);
+
+      
+
+    function Car(make, model, year) {
+        this.make = make;
+        this.model = model;
+        this.year = year;
+      }
+      
+      const car1 = new Car('Eagle', 'Talon TSi', 1993);
+      
+      console.log(car1.model);
+
+    </script>
+</body>
+</html>

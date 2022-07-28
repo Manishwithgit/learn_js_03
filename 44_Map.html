@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+</head>
+<body>
+    <style>body{background: maroon;}</style>
+    <script>
+
+        // const peeps1={
+        //     name:'manish',
+        //     age:'22'
+        // };
+        
+        // const meraMap= new Map();
+
+        //  set()
+
+        // meraMap.set('name', 'manish');
+        // meraMap.set(100,'this is a number');
+        // meraMap.set(peeps1,'realy cool');
+        // console.log(meraMap);
+
+        // console.log(meraMap.get(peeps1))
+
+
+        const score =300;
+        const priz=new Map();
+        priz.set(100,'Ball');
+        priz.set(200,'cycle');
+        priz.set(300,'bucket');
+
+        console.log(`you win a ${priz.get(score)}`);
+        
+        // select ul
+
+        // const ul=document.querySelector('.priz');
+        // for(const prize of priz){
+        //     console.log(prize)
+        // }
+
+        // const ul=document.querySelector('.priz');
+        // for(const prize of priz){
+        //     console.log(prize[0], prize[1]);
+        // }
+
+
+        // const ul=document.querySelector('.priz');
+        // for(const [point,prize] of priz){
+        //     console.log(point, prize);
+        // }
+
+
+        const hum=document.querySelector('.priz');
+        for(const [point,prize] of priz){
+            const li=`<li>${point}-${prize}<li>`;
+            
+            hum.insertAdjacentHTML('beforeend', li);    
+               console.log(hum);
+        }
+
+
+        // const ul=document.querySelector('.priz');
+        // for(const[points, prize]of priz){
+        //     const li=`<li>${points} -${prize}</li>`;
+        //     ul.insertAdjacentHTML('beforeend', li);
+        // }
+
+
+        // .has()
+        // .delete()
+
+    </script>
+</body>
+</html>

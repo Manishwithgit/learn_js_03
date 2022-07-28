@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loop</title>
+</head>
+<body>
+    <script>
+        // for
+
+
+       const num=[11, 31, 21, 111, 13, 43, 24, 4, 54, 1]
+
+       for(let i=0; i<num.length; i++){
+        console.log(num[i]);
+       }
+       
+       
+       for (let step = 0; step < 4 ; step++) {
+
+       console.log('Walking east one step');
+       console.log(step)
+       }
+
+
+       // for of
+          const naam='moon Knee';
+
+          for(const letter of naam){
+            console.log(letter);
+          }
+
+          // for in................used for looping over keysof an object
+
+          const haloo={
+            name:'white',
+            age:12,
+            hot:false
+          }
+          for (const pro in haloo){
+            console.log(pro)
+          }
+        
+          const base={
+            feet:2,
+            arms:1,
+            eyes:2,
+            head:1
+          };
+
+          function human(naam){
+            this.naam =naam;
+
+          }
+           human .prototype =base
+          const moon=new human('green')
+          console.log(moon)
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loop</title>
+ </head>
+ <body>
+   <style>body{background: rgb(161, 148, 134);}</style>
+    <script>
+
+      const total=[22,222,121,1212,332,1234,12322,12321123,67,456]
+      function tallyNum(tally, currentTot){
+         console.log(`the current talli is ${tally}`);
+         console.log(`the current talli is ${currentTot}`);
+         console.log('--------')
+
+         // return the current talyy plus the amount of this order....
+
+         return tally+currentTot;
+      }
+
+      const orders=total.reduce(tallyNum,0
+      );
+
+
+      const invent=[
+         {type:'shirt', price:400},
+         {type:'socks', price:411},
+         {type:'boot', price:422},
+         {type:'paint', price:433},
+         {type:'cort', price:444},
+         {type:'shoe', price:455},
+      ]
+
+      function inventReducer(all, item){
+         console.log(`looping over ${item.type}`);
+
+      }
+
+      const inventory=invent.reduce(inventReducer,{})
+      console.log(inventory)
+
+
+      
+      const text=`Hmm. We’re having trouble finding that site.
+
+We can’t connect to the server at wesbos.com.
+
+If that address is correct, here are three other things you can try:
+
+    Try again later.
+    Check your network connection.
+    If you are connected but behind a firewall, check that Firefox has permission to access the Web.
+
+    Hmm. We’re having trouble finding that site.
+
+We can’t connect to the server 22  at wesbos.com.
+
+If that address is correct, here are three other things you can try:
+
+    Try again later.
+    Check your network connection.
+    If you are connected but behind a firewall, check that Firefox has permission to access the Web.
+
+`
+
+      // const every=text.split('');
+      // const result=every.filter(char=>{
+         // if that character is (a-z lowercase) (a-zA-Z uppercae) (0-9 this get numbers) , then we want to keep it.......
+
+      //    if(char.match(/[a-zA-Z]/)){
+      //       return true;
+
+      //    } else{
+      //       return false;
+      //    }
+      // })
+      // console.log(result)
+
+
+      //..............................................
+      function validate(char){
+         return char.match(/[a-z0-9]/i);
+
+      }
+      
+      function lowercase(char){
+         return char.toLowerCase();
+      }
+
+      // const lowercase=char=>char.toLowerCase();
+
+      const result=text
+         .split('') // split each char into an item of an array
+         .filter(validate)
+         .map(lowercase)// convert every letter to lowecase
+
+         console.log(result)
+    </script>
+ </body>
+ </html>

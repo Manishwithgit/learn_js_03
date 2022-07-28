@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype</title>
+    <style>body{background: rgb(216, 168, 121);}</style>
+</head>
+<body>
+    <script>
+        // function pizz(top=[], customer){
+        //     console.log('making a pizza');
+
+        //     // save the topping that were passed in,  to this instance of pizza
+             
+        //     this.top=top;
+        //     this.customer=customer;
+        //     this.id=Math.floor(Math.random()*16777215).toString(16);
+        //     this.slices=10;
+        //     this.eat=function(){
+        //         console.log('CHOMP');
+        //         this.slices =this.slices-1;
+        //     }
+        // }
+
+
+        const array1 = [1, 2, 3];
+
+        console.log(array1.includes(3));
+        // expected output: true
+
+        const pets = ['cat', 'dog', 'bat'];
+
+        console.log(pets.includes('cat'));
+        // expected output: true
+
+        console.log(pets.includes('at'));
+        // expected output: false
+
+        // make sarcastic text
+
+        String.prototype.sarcastic=function(){
+
+            
+
+            const sarcastic=this.split('manish').map((char, i)=>{
+                if(i%2){
+                    return char.toUpperCase();
+
+                } else{
+                    return char.toLowerCase();
+                }
+            }).join('');
+
+            return sarcastic;
+
+            
+            
+        }
+    
+    </script>
+</body>
+</html>

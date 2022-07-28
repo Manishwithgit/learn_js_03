@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+     <style>body{background: rgb(184, 154, 124);}</style>
+    <script>
+        const name=['mani','kumar', 'mind', 'hghs', 'hdhd','adfrdf'];
+
+        console.log(name[0]);
+        console.log(name.length);
+        console.log(name[name.length-1]);
+
+        // mutable method......................
+
+        // const no=[1,2,3,4,5,];
+        // const backward=no.reverse();
+        // console.log(backward);
+        // console.log(no);  
+
+        // immutable method they do not chance original data.................
+        
+        // const gun=no.slice(3,5);
+        // console.log(gun);
+        // console.log(no);
+         
+        name.push('max');
+        console.log(name);
+
+        const naam=[...name,'kumar'];
+        name.unshift('monty');
+        // console.log(naam)
+        
+
+        const bike=['a','b','t','y','e','h'];
+        const newbike=[...bike.slice(0,2),'honda', ...bike.slice(2)]
+        console.log(newbike)
+
+        const bike2=[...newbike.slice(0,3),
+                 ...newbike.slice(4)];
+        console.log(bike2)
+      
+
+    </script>
+</body>
+</html> 

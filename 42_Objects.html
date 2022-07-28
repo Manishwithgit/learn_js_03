@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    <script>
+    //     const age= 100;
+    //     const peeps={
+    //         age,
+    //         name:'manish',
+    //         'cool':true,
+    //         'hot':false,
+    //         '222':true,
+    //         pet:'cat',
+    //         333:'2',
+    //         clon:{
+    //             shirt:10,
+    //             p:2
+    //         }
+    //     };
+
+    //     peeps.job ='developer';
+    //     console.log(peeps);
+
+    //    const propertytocheck=prompt('what do you want to check ?');
+    //    console.log(propertytocheck);
+
+
+    const age= 100;
+        const peeps={
+            age,
+            name:'manish',
+            'cool':true,
+            'hot':false,
+            '222':true,
+            pet:'cat',
+            333:'2',
+            clon:{
+                shirt:10,
+                p:2
+            },
+            sayHi:function(greet='be kind'){
+            return `${greet} ${this.name}`     // this=peeps
+            }
+        };
+
+        peeps.job ='developer';
+        console.log(peeps);
+
+       const propertytocheck=prompt('what do you want to check ?');
+       console.log(peeps[propertytocheck]);
+
+  
+
+
+
+    </script>
+</body>
+</html>
